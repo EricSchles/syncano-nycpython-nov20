@@ -30,9 +30,7 @@ def show_post(post_id):
 @app.route('/testing',defaults={'path':''})
 @app.route("/testing/<path:path>")
 def testing(path):
-    base_url = "http://127.0.0.1:5000/"
-    #r = requests.get(base_url+path)
-    return path
+    return "The path you input was %s" % path
 
 
 """
