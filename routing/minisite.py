@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, url_for
 import requests
 
 app = Flask(__name__)
@@ -30,9 +30,9 @@ def show_post(post_id):
 @app.route('/testing',defaults={'path':''})
 @app.route("/testing/<path:path>")
 def testing(path):
-    base_url = url_for('show_post',_external=True).split('/show_post')[0]
-    r = requests.get(base_url+path)
-    return r.ok
+    base_url = "http://127.0.0.1:5000/"
+    #r = requests.get(base_url+path)
+    return path
 
 
 """
