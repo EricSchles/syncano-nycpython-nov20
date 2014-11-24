@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>This is a directory of all of your friends.  Boo, why don't have any...</h1>
+    <form action="/signup">
+      <button type="submit">Sign up today!</button>
+    </form>
+
+   
+{% endblock %}

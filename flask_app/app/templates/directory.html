@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<ul class=entries>
+  {% for contact in contacts %}
+    <li><h2>Name:{{ contact.name }}</h2></li>
+    <li>Email:{{ contact.email }}</li>
+    <li>Phone:{{ contact.phone }}</li>
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+  </ul>
+   
+{% endblock %}
