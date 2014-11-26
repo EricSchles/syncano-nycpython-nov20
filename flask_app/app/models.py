@@ -2,7 +2,6 @@ from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 from app import app
 
-app.config['DATABASE'] = 'database.db'
 db = SQLAlchemy(app)
 
 class AccountHolder(db.Model):
